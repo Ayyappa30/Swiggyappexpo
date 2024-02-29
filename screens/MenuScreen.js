@@ -19,6 +19,7 @@ import { useSelector } from "react-redux";
 
 const MenuScreen = () => {
   const cart = useSelector((state) => state.cart.cart);
+  
   const total = cart
     .map((item) => item.price * item.quantity)
     .reduce((curr, prev) => curr + prev, 0);
